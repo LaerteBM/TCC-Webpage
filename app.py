@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_cors import CORS
@@ -13,7 +13,9 @@ db.init_app(app)
 CORS(app)
 
 class Sensor(db.Model):
-    id = db.Column('sensor_id', db.Integer, primary_key = True)
+    __tablename__ = 'sensor'
+
+    id = db.Column('id', db.Integer, primary_key = True)
     timestamp = db.Column(db.DateTime,nullable=False, default=datetime.utcnow)
     sexo = db.Column(db.String(1))
     idade = db.Column(db.Integer)
@@ -29,6 +31,9 @@ class Sensor(db.Model):
         self.temperatura = temp
         self.umidade = umidade
         self.luminancia = lumi
+    
+    def as_dict(self):
+       return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
 
 with app.app_context():
     db.create_all()
@@ -56,11 +61,11 @@ def post_data():
     db.session.commit()
     return 'ok'
 
-@app.route('/get_data')
+@app.route('/get_data', methods=['GET'])
 def get_data():
-    res = db.session.execute(db.select(Sensor).order_by(Sensor.id)).first()[0]
-    print(res.sexo)
-    return '200'
+    res = db.session.execute(db.select(Sensor).order_by(Sensor.id.desc())).first()[0]
+    print(jsonify(res.as_dict()))
+    return jsonify(res.as_dict())
 
 
 if __name__ == '__main__':
