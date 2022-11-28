@@ -68,5 +68,5 @@ def get_data():
     return jsonify(res.as_dict())
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
