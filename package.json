@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Burdenlite",
+    "TCC",
+    "nodejs server",
+    "Laerte Bernardo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.2.6"
+  },
+  "description": "Servidor Web da plataforma Burdenlite, parte do Trabalho de Conclusão do Curso de Engenharia Elétrica do IFPB Campus João Pessoa, feito pelo aluno Laerte Bernardo.",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
