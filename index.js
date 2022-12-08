@@ -78,6 +78,6 @@ app.post('/gravacao', (req, res) => {
 app.use(express.static(__dirname + '/Pages'))
 app.use(router)
 app.listen(porta, ()=>{
-  console.log(`Porta ${porta} disponível.`)
+  console.log(`Servidor Ativo. Porta ${porta} disponível.`)
 })
 

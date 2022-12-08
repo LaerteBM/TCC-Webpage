@@ -106,53 +106,38 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Preencha as informações abaixo</h2>
+          <h2>Dados Ambientais</h2>
         </div>
-
-        <section id="formulario" class="formulario">
-
-          <form action="https://formsubmit.co/537a3a5f5171f10e5d8a76d0a28419ce" method="post" class="php-email-form">
-            <div class="row">
-              <?php
-
-                echo "Conexão com o com o banco de dados realizada com sucesso!\n";
-              ?>
-            </div>
-          </form>
-    
-        </section>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="#" data-toggle="modal" data-target="#modal-rmssd-info" data-whatever="@getbootstrap">RMSSD <i class="fa fa-info-circle" aria-hidden="true"></i></a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi </p>
+          <div class="col align-items-stretch">
+            <div id="divIluminancia" class="icon-box">
+              <div class="icon"><i class="fas fa-lightbulb"></i></div>
+              <h4>Iluminância</h4>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
+          <div class="col align-items-stretch">
+            <div id="divTemperatura" class="icon-box">
               <div class="icon"><i class="fas fa-temperature-high"></i></div>
-              <h4><a href="">Temperatura</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4>Temperatura</h4>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
+          <div class="col align-items-stretch">
+            <div id="divUmidade" class="icon-box">
               <div class="icon"><i class="fa fa-droplet"></i><i class="fa fa-percent"></i></div>
-              <h4><a href="">Umidade Relativa do Ar</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4>Umidade Relativa do Ar</h4>
+              <p></p>
             </div>
           </div>
         </div>
-
+<!--
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-lightbulb"></i></div>
-              <h4><a href="">Iluminância</a></h4>
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="#" data-toggle="modal" data-target="#modal-rmssd-info" data-whatever="@getbootstrap">RMSSD <i class="fa fa-info-circle" aria-hidden="true"></i></a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -175,9 +160,42 @@
 
         </div>
   
-        </div>
+        </div>--/
       </section><!-- End Services Section -->
+    <div class="row">
+      <div class="section-title">
+        <h2>Preencha as informações abaixo</h2>
+      </div>
+      <form action="https://formsubmit.co/537a3a5f5171f10e5d8a76d0a28419ce" method="post" class="php-email-form">
+              <input type="hidden" name="acessKey" value="537a3a5f5171f10e5d8a76d0a28419ce">
 
+              <div class="row">
+                <div class="col form-group">
+                  <label for="name">Nome</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="col form-group">
+                  <label for="age">Idade</label>
+                  <input type="number" class="form-control" name="age" id="age" required>
+                </div>
+                <div class="col form-group">
+                  <label for="sex">Sexo</label>
+                  <select class="form-control" name="sex" id="sex" required>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4 form-group">
+                  <input type="submit" class="btn btn-primary d-block w-100" value="Enviar">
+                </div>
+              </div>
+                
+              
+
+            </form>
+    </div>
   </main><!-- End #main -->
 
   <hr>
@@ -267,6 +285,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="./assets/js/dash.js"></script>
 
 </body>
 

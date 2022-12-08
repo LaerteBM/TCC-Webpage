@@ -594,6 +594,8 @@ section {
   position: relative;
 }
 
+
+
 .search-form .form-group input {
   padding-right: 50px;
 }
@@ -933,7 +935,8 @@ section{
   background: #3291e6;
 }
 
-.services .icon-box:hover h4 a,
+.services .icon-box:hover h5,
+.services .icon-box:hover h4,
 .services .icon-box:hover p {
   color: #fff;
 }
