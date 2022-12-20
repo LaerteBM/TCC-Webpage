@@ -267,6 +267,34 @@ section {
   font-weight: 300;
 }
 
+.fecharModal{
+
+  display: inline-block;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #b80600;
+    border-color: #b80600;
+}
+  
+}
+
+#alertaTemp::backdrop{
+  background-color: rgb(0 0 0 /.5);
+}
+
 .pricing .popularity {
   text-transform: uppercase;
   font-size: 12px;
@@ -935,6 +963,7 @@ section{
   background: #3291e6;
 }
 
+.services .icon-box:hover a,
 .services .icon-box:hover h5,
 .services .icon-box:hover h4,
 .services .icon-box:hover p {
